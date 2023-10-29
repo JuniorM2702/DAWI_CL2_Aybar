@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="">
+<head th:replace="~{layout::head}">
+</head>
+<body>
+<nav th:replace="~{layout::menu}"></nav>
+<div class="card">
+    <div class="card-header">
+        Lista de Estados
+    </div>
+    <div class="card-body">
+        <button type="button" class="btn btn-primary"><i class="bi bi-plus-circle"></i> Nuevo </button>
+        <hr/>
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Descripcion</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="curso: ${listacursos}">
+                <td th:text="${estado.idestado}"></td>
+                <td th:text="${estado.descestado}"></td>
+
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
