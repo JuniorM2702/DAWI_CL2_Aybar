@@ -8,8 +8,6 @@ import java.util.List;
 public class CursoService {
     private CursoRepository cursoRepository;
 
-
-
     public List<Curso> listarCursos(){
         return cursoRepository.findAll();
     }
